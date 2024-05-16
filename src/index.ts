@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import "./lib/db";
 import express from "express";
 import countryRoutes from "./routes/country";
@@ -16,5 +19,5 @@ app.get("/", async (req, res) => {
 app.use("/countries", countryRoutes);
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`app listening at http://localhost:${port}`);
 });
